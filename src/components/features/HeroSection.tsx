@@ -61,7 +61,7 @@ export function HeroSection() {
         
         <div className="relative h-[400px] md:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
           <Image 
-            src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=1000&h=1200"
+            src="/images/hero-kitchen.jpg"
             alt="Professional pest control technician spraying safe chemicals in a modern kitchen"
             fill
             className="object-cover"
