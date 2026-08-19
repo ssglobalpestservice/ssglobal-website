@@ -98,7 +98,7 @@ export function BookingForm({ onSuccess, defaultService }: BookingFormProps) {
             <FormItem>
               <FormLabel>Full Name *</FormLabel>
               <FormControl>
-                <Input placeholder="John Doe" {...field} />
+                <Input placeholder="John Doe" className="bg-gray-50 focus-visible:ring-trustBlue" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -113,7 +113,7 @@ export function BookingForm({ onSuccess, defaultService }: BookingFormProps) {
               <FormItem>
                 <FormLabel>Phone Number *</FormLabel>
                 <FormControl>
-                  <Input placeholder="9324780380" {...field} />
+                  <Input placeholder="9324780380" className="bg-gray-50 focus-visible:ring-trustBlue" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -127,7 +127,7 @@ export function BookingForm({ onSuccess, defaultService }: BookingFormProps) {
               <FormItem>
                 <FormLabel>Email Address (Optional)</FormLabel>
                 <FormControl>
-                  <Input placeholder="john@example.com" type="email" {...field} />
+                  <Input placeholder="john@example.com" type="email" className="bg-gray-50 focus-visible:ring-trustBlue" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -144,7 +144,7 @@ export function BookingForm({ onSuccess, defaultService }: BookingFormProps) {
                 <FormLabel>Service Required *</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
-                    <SelectTrigger>
+                    <SelectTrigger className="bg-gray-50 focus:ring-trustBlue">
                       <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
                   </FormControl>
@@ -169,7 +169,7 @@ export function BookingForm({ onSuccess, defaultService }: BookingFormProps) {
                 <FormLabel>Location *</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
-                    <SelectTrigger>
+                    <SelectTrigger className="bg-gray-50 focus:ring-trustBlue">
                       <SelectValue placeholder="Select location" />
                     </SelectTrigger>
                   </FormControl>
@@ -197,7 +197,7 @@ export function BookingForm({ onSuccess, defaultService }: BookingFormProps) {
               <FormControl>
                 <Textarea 
                   placeholder="Tell us more about your pest problem..." 
-                  className="resize-none" 
+                  className="resize-none bg-gray-50 focus-visible:ring-trustBlue" 
                   {...field} 
                 />
               </FormControl>

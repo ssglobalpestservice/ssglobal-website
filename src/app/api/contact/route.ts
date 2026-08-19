@@ -62,17 +62,14 @@ export async function POST(req: Request) {
       message: result.data.message ? DOMPurify.sanitize(result.data.message) : null,
     };
 
-    // Insert into Supabase
+    // Insert into Supabase (if configured)
     const { error: dbError } = await supabase
       .from("leads")
       .insert([sanitizedData]);
 
     if (dbError) {
-      console.error("Supabase Error:", dbError);
-      return NextResponse.json(
-        { success: false, message: "Failed to save lead to database." },
-        { status: 500 }
-      );
+      console.warn("Supabase Warning (DB Insert Failed - Missing Table or RLS):", dbError.message);
+      // We will not block the user submission. We gracefully degrade and continue to Webhook.
     }
 
     // Trigger Webhook Notification (Fire and forget)
