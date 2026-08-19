@@ -113,7 +113,7 @@ export function BookingForm({ onSuccess, defaultService }: BookingFormProps) {
               <FormItem>
                 <FormLabel>Phone Number *</FormLabel>
                 <FormControl>
-                  <Input placeholder="9876543210" {...field} />
+                  <Input placeholder="9324780380" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
