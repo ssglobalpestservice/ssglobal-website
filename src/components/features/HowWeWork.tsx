@@ -4,8 +4,8 @@ export function HowWeWork() {
   const steps = [
     {
       icon: Search,
-      title: "Free On-Site Inspection",
-      description: "Our experts visit your premises to identify the pest type, source, and severity of infestation.",
+      title: "Expert Consultation & Assessment",
+      description: "Our team assesses your pest problem to identify the exact pest type, source, and severity of the infestation.",
     },
     {
       icon: SprayCan,
