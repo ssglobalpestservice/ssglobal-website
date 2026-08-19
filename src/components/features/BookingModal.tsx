@@ -24,7 +24,7 @@ export function BookingModal({ children, defaultService }: BookingModalProps) {
       <DialogTrigger render={children as React.ReactElement} />
       <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto bg-white shadow-2xl">
         <DialogHeader>
-          <DialogTitle className="text-2xl text-trustBlue">Book Inspection with S.S Global</DialogTitle>
+          <DialogTitle className="text-2xl text-trustBlue">Consult with S.S Global</DialogTitle>
           <DialogDescription>
             Fill out the form below and our experts will get back to you immediately to confirm your appointment.
           </DialogDescription>

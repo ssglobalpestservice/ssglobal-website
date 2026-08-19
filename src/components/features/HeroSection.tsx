@@ -25,7 +25,7 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4">
             <BookingModal>
               <Button size="lg" className="bg-alertOrange hover:bg-alertOrange/90 text-white h-14 px-8 text-lg">
-                Book Free Inspection
+                Consult With Us
               </Button>
             </BookingModal>
             <a href="tel:+919324780380">

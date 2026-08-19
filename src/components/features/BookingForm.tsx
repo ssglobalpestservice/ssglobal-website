@@ -217,7 +217,7 @@ export function BookingForm({ onSuccess, defaultService }: BookingFormProps) {
               Submitting...
             </>
           ) : (
-            "Request Free Inspection"
+            "Consult With Us"
           )}
         </Button>
       </form>

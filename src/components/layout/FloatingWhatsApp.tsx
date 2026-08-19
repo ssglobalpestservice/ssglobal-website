@@ -12,7 +12,7 @@ export function FloatingWhatsApp() {
 
   if (!mounted) return null;
 
-  const whatsappMessage = encodeURIComponent("Hi S.S Global team, I would like to book a free pest inspection.");
+  const whatsappMessage = encodeURIComponent("Hi S.S Global team, I would like to book a consultation.");
   const whatsappUrl = `https://wa.me/919324780380?text=${whatsappMessage}`;
 
   return (

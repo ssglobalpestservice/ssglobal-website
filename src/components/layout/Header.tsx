@@ -9,7 +9,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/images/logo.jpg" alt="S.S Global Pest Control Services" width={150} height={40} className="object-contain" />
+          <Image src="/images/logo.jpg" alt="S.S Global Pest Control Services" width={200} height={60} className="w-auto h-12 object-contain mix-blend-multiply" priority />
         </Link>
         
         <nav className="hidden md:flex gap-6">
@@ -31,7 +31,7 @@ export function Header() {
           </a>
           <BookingModal>
             <Button className="hidden md:flex bg-alertOrange hover:bg-alertOrange/90 text-white">
-              Get Free Quote
+              Consult With Us
             </Button>
           </BookingModal>
           <Button variant="ghost" size="icon" className="md:hidden">
