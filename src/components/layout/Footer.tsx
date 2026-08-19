@@ -7,7 +7,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-trustBlue text-white pt-16 pb-24 md:pb-8">
+    <footer className="bg-trustBlue text-white pt-16 pb-24 md:pb-8" id="areas">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
           <h3 className="text-2xl font-bold mb-4">S.S Global Pest Control Services</h3>
@@ -54,7 +54,6 @@ export function Footer() {
             <p>Mumbai 400102</p>
             <p className="pt-2">Phone: <a href="tel:+919324780380" className="hover:text-white">+91 93247 80380</a> / <a href="tel:+919372989079" className="hover:text-white">93729 89079</a></p>
             <p>Email: <a href="mailto:info@SSGlobalPestcontrolservice.com" className="hover:text-white">info@SSGlobalPestcontrolservice.com</a></p>
-            <p>Website: <a href="https://SSGlobalPestcontrolservice.com" className="hover:text-white">SSGlobalPestcontrolservice.com</a></p>
             <div className="flex gap-4 pt-4">
               <a href="https://instagram.com/ssglobalpestcontrolservice" target="_blank" rel="noopener noreferrer" className="hover:text-ecoGreen">Instagram</a>
               <a href="https://facebook.com/ssglobalpestcontrolservice" target="_blank" rel="noopener noreferrer" className="hover:text-ecoGreen">Facebook</a>

@@ -24,10 +24,10 @@ export function Header() {
         </Link>
         
         <nav className="hidden md:flex gap-6">
-          <Link href="#services" className="text-sm font-medium hover:text-ecoGreen transition-colors">Services</Link>
-          <Link href="#process" className="text-sm font-medium hover:text-ecoGreen transition-colors">How We Work</Link>
-          <Link href="#reviews" className="text-sm font-medium hover:text-ecoGreen transition-colors">Reviews</Link>
-          <Link href="#areas" className="text-sm font-medium hover:text-ecoGreen transition-colors">Service Areas</Link>
+          <a href="#services" className="text-sm font-medium hover:text-ecoGreen transition-colors">Services</a>
+          <a href="#process" className="text-sm font-medium hover:text-ecoGreen transition-colors">How We Work</a>
+          <a href="#reviews" className="text-sm font-medium hover:text-ecoGreen transition-colors">Reviews</a>
+          <a href="#areas" className="text-sm font-medium hover:text-ecoGreen transition-colors">Service Areas</a>
         </nav>
 
         <div className="flex items-center gap-4">
