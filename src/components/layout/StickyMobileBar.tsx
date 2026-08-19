@@ -17,7 +17,7 @@ export function StickyMobileBar() {
       <BookingModal>
         <Button className="flex-1 bg-alertOrange hover:bg-alertOrange/90 text-white">
           <ClipboardList className="mr-2 h-4 w-4" />
-          Consult With Us
+          Book Now
         </Button>
       </BookingModal>
     </div>

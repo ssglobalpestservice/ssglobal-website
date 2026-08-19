@@ -54,6 +54,7 @@ export function BookingForm({ onSuccess, defaultService }: BookingFormProps) {
       email: "",
       serviceType: defaultService || "",
       location: "",
+      address: "",
       message: "",
     },
   });
@@ -190,6 +191,20 @@ export function BookingForm({ onSuccess, defaultService }: BookingFormProps) {
 
         <FormField
           control={form.control}
+          name="address"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Full Address (Optional)</FormLabel>
+              <FormControl>
+                <Input placeholder="Flat No, Building, Street..." className="bg-gray-50 focus-visible:ring-trustBlue" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
           name="message"
           render={({ field }) => (
             <FormItem>
@@ -217,7 +232,7 @@ export function BookingForm({ onSuccess, defaultService }: BookingFormProps) {
               Submitting...
             </>
           ) : (
-            "Consult With Us"
+            "Book Now"
           )}
         </Button>
       </form>

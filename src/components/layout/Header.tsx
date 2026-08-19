@@ -42,7 +42,7 @@ export function Header() {
           </a>
           <BookingModal>
             <Button className="hidden md:flex bg-alertOrange hover:bg-alertOrange/90 text-white">
-              Consult With Us
+              Book Now
             </Button>
           </BookingModal>
           <Button variant="ghost" size="icon" className="md:hidden">

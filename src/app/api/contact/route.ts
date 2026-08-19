@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { contactSchema } from "@/lib/validations/contact";
 import DOMPurify from "isomorphic-dompurify";
+
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 import { supabase } from "@/lib/supabase";
 
 // Memory-based rate limiting
@@ -58,6 +60,7 @@ export async function POST(req: Request) {
       phone: DOMPurify.sanitize(result.data.phone),
       service_type: DOMPurify.sanitize(result.data.serviceType),
       location: DOMPurify.sanitize(result.data.location),
+      address: result.data.address ? DOMPurify.sanitize(result.data.address) : null,
       email: result.data.email ? DOMPurify.sanitize(result.data.email) : null,
       message: result.data.message ? DOMPurify.sanitize(result.data.message) : null,
     };
@@ -75,11 +78,13 @@ export async function POST(req: Request) {
     // Trigger Webhook Notification (Fire and forget)
     const webhookUrl = process.env.DISCORD_WEBHOOK_URL || process.env.LEAD_WEBHOOK_URL;
     if (webhookUrl) {
+      const addressText = sanitizedData.address ? `\n**Address:** ${sanitizedData.address}` : "";
+      const msgText = sanitizedData.message ? `\n**Message:** ${sanitizedData.message}` : "";
       fetch(webhookUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          content: `🚨 **New Pest Control Lead!**\n**Name:** ${sanitizedData.full_name}\n**Phone:** ${sanitizedData.phone}\n**Location:** ${sanitizedData.location}\n**Service:** ${sanitizedData.service_type}`,
+          content: `🚨 **New Pest Control Lead!**\n**Name:** ${sanitizedData.full_name}\n**Phone:** ${sanitizedData.phone}\n**Location:** ${sanitizedData.location}${addressText}\n**Service:** ${sanitizedData.service_type}${msgText}`,
         }),
       }).catch((err) => console.error("Webhook Error:", err));
     }
