@@ -7,9 +7,20 @@ import { BookingModal } from "@/components/features/BookingModal";
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <Image src="/images/logo.jpg" alt="S.S Global Pest Control Services" width={200} height={60} className="w-auto h-12 object-contain mix-blend-multiply" priority />
+      <div className="container mx-auto px-4 h-20 md:h-24 flex items-center justify-between">
+        <Link href="/" className="flex items-center gap-3">
+          <Image 
+            src="/images/logo.jpg" 
+            alt="S.S Global Logo" 
+            width={100} 
+            height={100} 
+            className="w-auto h-16 md:h-20 object-contain mix-blend-multiply" 
+            priority 
+          />
+          <div className="flex flex-col">
+            <span className="font-bold text-lg md:text-2xl text-trustBlue tracking-tight leading-none">S.S Global</span>
+            <span className="font-bold text-xs md:text-sm text-ecoGreen mt-1 uppercase tracking-wide">Pest Control Services</span>
+          </div>
         </Link>
         
         <nav className="hidden md:flex gap-6">
