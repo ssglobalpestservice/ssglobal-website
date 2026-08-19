@@ -6,15 +6,15 @@ import { BookingModal } from "@/components/features/BookingModal";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto px-4 h-20 md:h-24 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
+      <div className="container mx-auto px-4 h-24 md:h-28 flex items-center justify-between py-2">
+        <Link href="/" className="flex items-center gap-4">
           <Image 
-            src="/images/logo.jpg" 
+            src="/images/logo-transparent.png" 
             alt="S.S Global Logo" 
-            width={100} 
-            height={100} 
-            className="w-auto h-16 md:h-20 object-contain mix-blend-multiply" 
+            width={120} 
+            height={120} 
+            className="w-auto h-20 md:h-24 object-contain" 
             priority 
           />
           <div className="flex flex-col">
