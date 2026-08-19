@@ -60,7 +60,7 @@ export async function POST(req: Request) {
       phone: DOMPurify.sanitize(result.data.phone),
       service_type: DOMPurify.sanitize(result.data.serviceType),
       location: DOMPurify.sanitize(result.data.location),
-      address: result.data.address ? DOMPurify.sanitize(result.data.address) : null,
+      address: DOMPurify.sanitize(result.data.address),
       email: result.data.email ? DOMPurify.sanitize(result.data.email) : null,
       message: result.data.message ? DOMPurify.sanitize(result.data.message) : null,
     };
@@ -78,13 +78,33 @@ export async function POST(req: Request) {
     // Trigger Webhook Notification (Fire and forget)
     const webhookUrl = process.env.DISCORD_WEBHOOK_URL || process.env.LEAD_WEBHOOK_URL;
     if (webhookUrl) {
-      const addressText = sanitizedData.address ? `\n**Address:** ${sanitizedData.address}` : "";
-      const msgText = sanitizedData.message ? `\n**Message:** ${sanitizedData.message}` : "";
+      const embedFields = [
+        { name: "👤 Name", value: sanitizedData.full_name, inline: true },
+        { name: "📞 Phone", value: sanitizedData.phone, inline: true },
+        { name: "🛠️ Service", value: sanitizedData.service_type, inline: true },
+        { name: "📍 Location", value: sanitizedData.location, inline: true },
+        { name: "🏠 Address", value: sanitizedData.address, inline: false }
+      ];
+
+      if (sanitizedData.email) {
+        embedFields.push({ name: "✉️ Email", value: sanitizedData.email, inline: true });
+      }
+      if (sanitizedData.message) {
+        embedFields.push({ name: "📝 Additional Details", value: sanitizedData.message, inline: false });
+      }
+
       fetch(webhookUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          content: `🚨 **New Pest Control Lead!**\n**Name:** ${sanitizedData.full_name}\n**Phone:** ${sanitizedData.phone}\n**Location:** ${sanitizedData.location}${addressText}\n**Service:** ${sanitizedData.service_type}${msgText}`,
+          embeds: [
+            {
+              title: "🚨 New Pest Control Lead Received!",
+              color: 15105570, // Alert Orange
+              fields: embedFields,
+              timestamp: new Date().toISOString()
+            }
+          ]
         }),
       }).catch((err) => console.error("Webhook Error:", err));
     }

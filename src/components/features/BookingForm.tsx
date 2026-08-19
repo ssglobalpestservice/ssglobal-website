@@ -194,7 +194,7 @@ export function BookingForm({ onSuccess, defaultService }: BookingFormProps) {
           name="address"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Full Address (Optional)</FormLabel>
+              <FormLabel>Full Address *</FormLabel>
               <FormControl>
                 <Input placeholder="Flat No, Building, Street..." className="bg-gray-50 focus-visible:ring-trustBlue" {...field} />
               </FormControl>
