@@ -52,7 +52,7 @@ function ServiceCard({ service }: { service: { title: string; image: string; des
       <div className="relative h-48 overflow-hidden">
         <Image
           src={service.image}
-          alt={service.title}
+          alt={`${service.title} - Professional pest management in Mumbai`}
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-500"
         />

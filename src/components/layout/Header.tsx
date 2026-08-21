@@ -11,7 +11,7 @@ export function Header() {
         <Link href="/" className="flex items-center gap-4">
           <Image 
             src="/images/logo-transparent.png" 
-            alt="S.S Global Logo" 
+            alt="S.S Global Pest Control Services Logo" 
             width={120} 
             height={120} 
             className="w-auto h-20 md:h-24 object-contain" 

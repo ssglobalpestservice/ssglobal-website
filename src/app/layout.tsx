@@ -36,6 +36,18 @@ export const metadata: Metadata = {
     "Jogeshwari pest control",
     "Western Suburbs pest control"
   ],
+  metadataBase: new URL("https://ssglobalpestscontrolservices.com"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "S.S Global Pest Control Services",
+    description: "Certified, odorless, and eco-friendly pest control & termite treatment across Mumbai.",
+    url: "https://ssglobalpestscontrolservices.com",
+    siteName: "S.S Global Pest Control Services",
+    locale: "en_IN",
+    type: "website",
+  }
 };
 
 export default function RootLayout({
