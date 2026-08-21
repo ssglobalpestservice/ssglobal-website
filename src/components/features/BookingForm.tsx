@@ -75,6 +75,7 @@ export function BookingForm({ onSuccess, defaultService }: BookingFormProps) {
       form.reset();
       onSuccess?.();
     } catch (error) {
+      console.error("WhatsApp redirect error:", error);
       toast.error("Error", {
         description: "Failed to open WhatsApp.",
       });
