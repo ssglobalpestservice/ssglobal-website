@@ -59,6 +59,7 @@ export async function POST(req: Request) {
       full_name: DOMPurify.sanitize(result.data.fullName),
       phone: DOMPurify.sanitize(result.data.phone),
       service_type: DOMPurify.sanitize(result.data.serviceType),
+      bhk_size: DOMPurify.sanitize(result.data.bhkSize),
       location: DOMPurify.sanitize(result.data.location),
       address: DOMPurify.sanitize(result.data.address),
       email: result.data.email ? DOMPurify.sanitize(result.data.email) : null,
@@ -82,6 +83,7 @@ export async function POST(req: Request) {
         { name: "👤 Name", value: sanitizedData.full_name, inline: true },
         { name: "📞 Phone", value: sanitizedData.phone, inline: true },
         { name: "🛠️ Service", value: sanitizedData.service_type, inline: true },
+        { name: "📏 Property Size", value: sanitizedData.bhk_size, inline: true },
         { name: "📍 Location", value: sanitizedData.location, inline: true },
         { name: "🏠 Address", value: sanitizedData.address, inline: false }
       ];

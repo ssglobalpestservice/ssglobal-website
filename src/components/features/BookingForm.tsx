@@ -53,6 +53,7 @@ export function BookingForm({ onSuccess, defaultService }: BookingFormProps) {
       phone: "",
       email: "",
       serviceType: defaultService || "",
+      bhkSize: "",
       location: "",
       address: "",
       message: "",
@@ -136,7 +137,7 @@ export function BookingForm({ onSuccess, defaultService }: BookingFormProps) {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <FormField
             control={form.control}
             name="serviceType"
@@ -155,6 +156,32 @@ export function BookingForm({ onSuccess, defaultService }: BookingFormProps) {
                         {service.title} ({service.type})
                       </SelectItem>
                     ))}
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="bhkSize"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Property Size *</FormLabel>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <FormControl>
+                    <SelectTrigger className="bg-gray-50 focus:ring-trustBlue">
+                      <SelectValue placeholder="Select size" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="1 BHK">1 BHK</SelectItem>
+                    <SelectItem value="2 BHK">2 BHK</SelectItem>
+                    <SelectItem value="3 BHK">3 BHK</SelectItem>
+                    <SelectItem value="4+ BHK / Villa">4+ BHK / Villa</SelectItem>
+                    <SelectItem value="Commercial Office">Commercial Office</SelectItem>
+                    <SelectItem value="Other">Other</SelectItem>
                   </SelectContent>
                 </Select>
                 <FormMessage />

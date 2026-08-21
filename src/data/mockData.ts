@@ -50,31 +50,31 @@ export const services = {
 export const reviews = [
   {
     id: 1,
-    name: "Rajesh Sharma",
-    location: "Malad East",
+    name: "Local Customer",
+    location: "Jogeshwari",
     rating: 5,
-    text: "The herbal pest control was completely odorless. We didn't even have to leave the house. Very professional team!",
+    text: "[PASTE REAL REVIEW FROM GOOGLE LINK HERE]",
   },
   {
     id: 2,
-    name: "Sneha Patel",
-    location: "Jogeshwari",
+    name: "Local Customer",
+    location: "Goregaon",
     rating: 5,
-    text: "Had a severe termite issue in our wooden wardrobes. Their drill-fill-seal method worked wonders. Highly recommend S.S Global.",
+    text: "[PASTE REAL REVIEW FROM GOOGLE LINK HERE]",
   },
   {
     id: 3,
-    name: "Vikram Desai",
-    location: "Thane",
+    name: "Local Customer",
+    location: "Malad",
     rating: 5,
-    text: "Booked them for bed bug treatment. They did a thorough job in two sessions. Finally sleeping peacefully after weeks.",
+    text: "[PASTE REAL REVIEW FROM GOOGLE LINK HERE]",
   },
   {
     id: 4,
-    name: "Pooja Mehta",
-    location: "Borivali",
+    name: "Local Customer",
+    location: "Andheri",
     rating: 5,
-    text: "Punctual, polite, and very effective service. The cockroach problem in my kitchen vanished within 3 days of the gel treatment.",
+    text: "[PASTE REAL REVIEW FROM GOOGLE LINK HERE]",
   },
 ];
 
