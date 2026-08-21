@@ -26,22 +26,19 @@ export function Footer() {
         <div>
           <h4 className="font-semibold text-lg mb-4 text-ecoGreen">Our Services</h4>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li><Link href="#services" className="hover:text-white transition-colors">Herbal Pest Control</Link></li>
-            <li><Link href="#services" className="hover:text-white transition-colors">Termite (Drill-Fill-Seal)</Link></li>
-            <li><Link href="#services" className="hover:text-white transition-colors">Bed Bug Treatment</Link></li>
+            <li><Link href="#services" className="hover:text-white transition-colors">Ticks Pest Control</Link></li>
+            <li><Link href="#services" className="hover:text-white transition-colors">Mosquito Pest Control</Link></li>
+            <li><Link href="#services" className="hover:text-white transition-colors">Rats Pest Control</Link></li>
+            <li><Link href="#services" className="hover:text-white transition-colors">Ant Pest Control</Link></li>
           </ul>
         </div>
 
         <div>
           <h4 className="font-semibold text-lg mb-4 text-ecoGreen">Service Areas</h4>
-          <p className="text-sm text-gray-300 mb-2">Proudly serving all over Mumbai:</p>
-          <ul className="grid grid-cols-2 gap-2 text-sm text-gray-300">
-            {serviceAreas.map((area) => (
-              <li key={area}>
-                <Link href={`#areas`} className="hover:text-white transition-colors">{area}</Link>
-              </li>
-            ))}
-          </ul>
+          <p className="text-sm text-gray-300 leading-relaxed">
+            We proudly serve <strong>all over Mumbai</strong> and surrounding regions.
+            Whether you are located in the Western Suburbs, Central Suburbs, South Mumbai, Thane, or Navi Mumbai, our expert technicians will reach your doorstep.
+          </p>
         </div>
 
         <div>
