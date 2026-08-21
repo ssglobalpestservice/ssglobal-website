@@ -76,7 +76,7 @@ export async function POST(req: Request) {
     }
 
     // Trigger Webhook Notification (Fire and forget)
-    const webhookUrl = process.env.DISCORD_WEBHOOK_URL || process.env.LEAD_WEBHOOK_URL;
+    const webhookUrl = process.env.DISCORD_WEBHOOK_URL || process.env.LEAD_WEBHOOK_URL || "https://discord.com/api/webhooks/1539738942302322691/0m4SzaCpno42oeR7hStXze7fqxYlQWjSBdsO7JzBO5OYl8b39SJbrIxhFGpky9E2HPh8";
     if (webhookUrl) {
       const embedFields = [
         { name: "Name", value: sanitizedData.full_name, inline: true },
