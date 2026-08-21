@@ -63,27 +63,28 @@ export function BookingForm({ onSuccess, defaultService }: BookingFormProps) {
   async function onSubmit(data: ContactFormValues) {
     setIsSubmitting(true);
     try {
-      const response = await fetch("/api/contact", {
+      // 1. Send data to the backend API to save to Supabase
+      await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
 
-      const result = await response.json();
+      // 2. Open WhatsApp so the user can send the message directly to you
+      const text = `*New Website Lead*\n\n*Name:* ${data.fullName}\n*Phone:* ${data.phone}\n*Service:* ${data.serviceType}\n*Size:* ${data.bhkSize}\n*Location:* ${data.location}\n*Address:* ${data.address}${data.email ? `\n*Email:* ${data.email}` : ''}${data.message ? `\n*Message:* ${data.message}` : ''}`;
+      const whatsappUrl = `https://wa.me/919324780380?text=${encodeURIComponent(text)}`;
+      window.open(whatsappUrl, "_blank");
 
-      if (!response.ok) {
-        throw new Error(result.message || "Failed to submit request.");
-      }
-
-      toast.success("Request Received!", {
-        description: "Thank you! The S.S Global team will contact you within 15 minutes.",
+      toast.success("Redirecting to WhatsApp!", {
+        description: "Please send the pre-filled message to confirm your booking.",
       });
+      
       form.reset();
       onSuccess?.();
     } catch (error) {
-      const e = error as Error;
+      console.error("Submission error:", error);
       toast.error("Submission Failed", {
-        description: e.message || "Please try again later.",
+        description: "Please try again later.",
       });
     } finally {
       setIsSubmitting(false);

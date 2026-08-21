@@ -75,41 +75,6 @@ export async function POST(req: Request) {
       console.warn("Supabase exception:", dbEx);
     }
 
-    // Trigger Webhook Notification (Fire and forget)
-    const webhookUrl = process.env.DISCORD_WEBHOOK_URL || process.env.LEAD_WEBHOOK_URL || "https://discord.com/api/webhooks/1539738942302322691/0m4SzaCpno42oeR7hStXze7fqxYlQWjSBdsO7JzBO5OYl8b39SJbrIxhFGpky9E2HPh8";
-    if (webhookUrl) {
-      const embedFields = [
-        { name: "Name", value: sanitizedData.full_name, inline: true },
-        { name: "Phone", value: sanitizedData.phone, inline: true },
-        { name: "Service", value: sanitizedData.service_type, inline: true },
-        { name: "Property Size", value: sanitizedData.bhk_size, inline: true },
-        { name: "Location", value: sanitizedData.location, inline: true },
-        { name: "Address", value: sanitizedData.address, inline: false }
-      ];
-
-      if (sanitizedData.email) {
-        embedFields.push({ name: "Email", value: sanitizedData.email, inline: true });
-      }
-      if (sanitizedData.message) {
-        embedFields.push({ name: "Additional Details", value: sanitizedData.message, inline: false });
-      }
-
-      fetch(webhookUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          embeds: [
-            {
-              title: "New Pest Control Lead Received!",
-              color: 15105570, // Alert Orange
-              fields: embedFields,
-              timestamp: new Date().toISOString()
-            }
-          ]
-        }),
-      }).catch((err) => console.error("Webhook Error:", err));
-    }
-
     return NextResponse.json(
       { success: true, message: "Request received successfully." },
       { status: 200 }
