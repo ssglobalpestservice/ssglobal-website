@@ -1,11 +1,6 @@
 import Link from "next/link";
 
 export function Footer() {
-  const serviceAreas = [
-    "Jogeshwari", "Goregaon", "Malad", "Kandivali", "Borivali", 
-    "Andheri", "Bandra", "Thane", "Navi Mumbai"
-  ];
-
   return (
     <footer className="bg-trustBlue text-white pt-16 pb-24 md:pb-8" id="areas">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -19,7 +14,7 @@ export function Footer() {
           </p>
           <p className="text-gray-300 text-sm">
             ISO 9001:2015 Certified<br/>
-            14+ Years Experience
+            3+ Years Experience
           </p>
         </div>
         

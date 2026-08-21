@@ -41,7 +41,7 @@ export function HeroSection() {
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 border-t border-gray-200">
             <div className="flex flex-col gap-1">
-              <span className="font-bold text-xl text-gray-900 flex items-center gap-1">14+ <Award className="h-5 w-5 text-alertOrange"/></span>
+              <span className="font-bold text-xl text-gray-900 flex items-center gap-1">3+ <Award className="h-5 w-5 text-alertOrange"/></span>
               <span className="text-sm text-gray-500">Years Exp.</span>
             </div>
             <div className="flex flex-col gap-1">
