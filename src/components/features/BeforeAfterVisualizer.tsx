@@ -15,11 +15,11 @@ const scenarios = [
   },
   {
     id: "termite",
-    label: "Termite Damage",
+    label: "Termite Lines",
     before: "/images/termite_before.jpg",
     after: "/images/termite_after.jpg",
-    altBefore: "Wood with termite damage",
-    altAfter: "Restored wood"
+    altBefore: "Wall with termite lines",
+    altAfter: "Clean treated wall"
   },
   {
     id: "upholstery",

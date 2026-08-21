@@ -22,17 +22,17 @@ export function HeroSection() {
             Enterprise-grade pest control solutions for your home and business. Get rid of termites, bed bugs, cockroaches, and more.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 w-full">
             <BookingModal>
-              <Button size="lg" className="bg-alertOrange hover:bg-alertOrange/90 text-white h-14 px-8 text-lg">
+              <Button size="lg" className="w-full sm:w-auto bg-alertOrange hover:bg-alertOrange/90 text-white h-14 px-8 text-lg">
                 Book Now
               </Button>
             </BookingModal>
-            <a href="tel:+919324780380">
+            <a href="tel:+919324780380" className="w-full sm:w-auto">
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-trustBlue text-trustBlue hover:bg-trustBlue hover:text-white h-14 px-8 text-lg" 
+                className="w-full border-trustBlue text-trustBlue hover:bg-trustBlue hover:text-white h-14 px-8 text-lg" 
               >
                 Call Now / WhatsApp
               </Button>
