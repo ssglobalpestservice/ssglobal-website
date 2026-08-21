@@ -25,6 +25,9 @@ export function Footer() {
             <li><Link href="#services" className="hover:text-white transition-colors">Mosquito Pest Control</Link></li>
             <li><Link href="#services" className="hover:text-white transition-colors">Rats Pest Control</Link></li>
             <li><Link href="#services" className="hover:text-white transition-colors">Ant Pest Control</Link></li>
+            <li><Link href="#services" className="hover:text-white transition-colors">Termites Pest Control</Link></li>
+            <li><Link href="#services" className="hover:text-white transition-colors">Cockroaches Pest Control</Link></li>
+            <li><Link href="#services" className="hover:text-white transition-colors">Bed Bugs Pest Control</Link></li>
           </ul>
         </div>
 

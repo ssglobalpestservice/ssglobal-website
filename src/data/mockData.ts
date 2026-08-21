@@ -28,6 +28,27 @@ export const services = {
       highlights: ["Colony Eradication", "Odorless Gel", "Food-Safe Treatment"],
       image: "/images/ants.jpg",
     },
+    {
+      id: "res-5",
+      title: "Termites Pest Control",
+      description: "Advanced anti-termite treatments to protect buildings and wooden structures.",
+      highlights: ["Drill-Fill-Seal Tech", "Long-term Protection", "Structural Safety"],
+      image: "/images/termites.jpg",
+    },
+    {
+      id: "res-6",
+      title: "Cockroaches Pest Control",
+      description: "Effective treatments to eliminate cockroach infestations and maintain hygiene.",
+      highlights: ["Odorless Gel Baiting", "Safe for Kitchens", "Complete Elimination"],
+      image: "/images/cockroaches.jpg",
+    },
+    {
+      id: "res-7",
+      title: "Bed Bugs Pest Control",
+      description: "Powerful pest control solutions to eliminate bed bugs completely from your space.",
+      highlights: ["Deep Penetration", "Eggs Eradication", "Sleep Peacefully"],
+      image: "/images/bedbugs.jpg",
+    },
   ],
   commercial: [
     {
