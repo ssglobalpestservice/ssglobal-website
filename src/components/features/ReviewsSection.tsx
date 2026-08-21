@@ -14,7 +14,7 @@ export function ReviewsSection() {
                 <Star key={i} className="h-6 w-6 text-yellow-500 fill-yellow-500" />
               ))}
             </div>
-            <span className="text-xl font-bold text-gray-900">4.9/5 Average Rating</span>
+            <span className="text-xl font-bold text-gray-900">4.7/5 Average Rating</span>
           </div>
           <p className="text-gray-600 mb-6">See what our customers across Mumbai have to say.</p>
           <a 

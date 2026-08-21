@@ -49,7 +49,7 @@ export function HeroSection() {
               <span className="text-sm text-gray-500">Homes Treated</span>
             </div>
             <div className="flex flex-col gap-1">
-              <span className="font-bold text-xl text-gray-900 flex items-center gap-1">4.9 <Star className="h-5 w-5 text-yellow-500 fill-yellow-500"/></span>
+              <span className="font-bold text-xl text-gray-900 flex items-center gap-1">4.7 <Star className="h-5 w-5 text-yellow-500 fill-yellow-500"/></span>
               <span className="text-sm text-gray-500">Google Rating</span>
             </div>
             <div className="flex flex-col gap-1">
