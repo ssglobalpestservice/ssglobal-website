@@ -16,7 +16,15 @@ export function ReviewsSection() {
             </div>
             <span className="text-xl font-bold text-gray-900">4.9/5 Average Rating</span>
           </div>
-          <p className="text-gray-600">See what our customers across Mumbai have to say.</p>
+          <p className="text-gray-600 mb-6">See what our customers across Mumbai have to say.</p>
+          <a 
+            href="https://g.page/r/YOUR_GOOGLE_REVIEW_LINK_HERE" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-white border-2 border-trustBlue text-trustBlue hover:bg-trustBlue hover:text-white transition-all font-bold py-2.5 px-6 rounded-full shadow-sm hover:shadow-md"
+          >
+            Write a Google Review
+          </a>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
