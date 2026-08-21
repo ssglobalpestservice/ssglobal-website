@@ -71,7 +71,7 @@ export function BookingForm({ onSuccess, defaultService }: BookingFormProps) {
       });
 
       // 2. Open WhatsApp so the user can send the message directly to you
-      const text = `*New Website Lead*\n\n*Name:* ${data.fullName}\n*Phone:* ${data.phone}\n*Service:* ${data.serviceType}\n*Size:* ${data.bhkSize}\n*Location:* ${data.location}\n*Address:* ${data.address}${data.email ? `\n*Email:* ${data.email}` : ''}${data.message ? `\n*Message:* ${data.message}` : ''}`;
+      const text = `Hi S.S Global Pest Control team,\n\nI would like to book a pest control service. Here are my details:\n\n*Name:* ${data.fullName}\n*Phone:* ${data.phone}\n*Service Required:* ${data.serviceType}\n*Property Size:* ${data.bhkSize}\n*Location:* ${data.location}\n*Full Address:* ${data.address}${data.email ? `\n*Email:* ${data.email}` : ''}${data.message ? `\n*Additional Details:* ${data.message}` : ''}\n\nPlease let me know when we can schedule this. Thank you!`;
       const whatsappUrl = `https://wa.me/919324780380?text=${encodeURIComponent(text)}`;
       window.open(whatsappUrl, "_blank");
 
