@@ -13,7 +13,6 @@ export function Footer() {
             Enterprise-grade pest control solutions for residential and commercial properties. Safe, effective, and guaranteed results.
           </p>
           <p className="text-gray-300 text-sm">
-            ISO 9001:2015 Certified<br/>
             3+ Years Experience
           </p>
         </div>
