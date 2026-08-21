@@ -12,7 +12,30 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: "S.S Global Pest Control Services | Safe, Odorless & Eco-Friendly Pest Management",
-  description: "S.S Global Pest Control Services offers certified, odorless, and eco-friendly pest control & termite treatment across Mumbai, Thane, and Navi Mumbai. Call for a free inspection today.",
+  description: "S.S Global Pest Control Services offers certified, odorless, and eco-friendly pest control & termite treatment across Mumbai, Thane, and Navi Mumbai. Book your pest control today.",
+  keywords: [
+    "SS PESTS CONTROL SERVICES",
+    "SS PEST CONTROL",
+    "ss global pests control services",
+    "ss global",
+    "SS GLOBAL",
+    "PEST CONTROL",
+    "pest control",
+    "S.S Global Pest Control Services",
+    "pest control services in Mumbai",
+    "best pest control near me",
+    "termite pest control Mumbai",
+    "bed bugs pest control",
+    "cockroach pest control",
+    "eco-friendly pest control",
+    "odorless pest control",
+    "residential pest control",
+    "commercial pest management",
+    "rat and rodent control",
+    "mosquito fogging services",
+    "Jogeshwari pest control",
+    "Western Suburbs pest control"
+  ],
 };
 
 export default function RootLayout({
