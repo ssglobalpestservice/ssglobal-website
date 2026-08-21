@@ -29,14 +29,12 @@ export function Footer() {
             <li><Link href="#services" className="hover:text-white transition-colors">Herbal Pest Control</Link></li>
             <li><Link href="#services" className="hover:text-white transition-colors">Termite (Drill-Fill-Seal)</Link></li>
             <li><Link href="#services" className="hover:text-white transition-colors">Bed Bug Treatment</Link></li>
-            <li><Link href="#services" className="hover:text-white transition-colors">Car Pest Control</Link></li>
-            <li><Link href="#services" className="hover:text-white transition-colors">Beehive Removal</Link></li>
           </ul>
         </div>
 
         <div>
           <h4 className="font-semibold text-lg mb-4 text-ecoGreen">Service Areas</h4>
-          <p className="text-sm text-gray-300 mb-2">Proudly serving Mumbai&apos;s Western Suburbs & Beyond:</p>
+          <p className="text-sm text-gray-300 mb-2">Proudly serving all over Mumbai:</p>
           <ul className="grid grid-cols-2 gap-2 text-sm text-gray-300">
             {serviceAreas.map((area) => (
               <li key={area}>
