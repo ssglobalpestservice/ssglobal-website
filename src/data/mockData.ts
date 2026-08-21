@@ -56,21 +56,21 @@ export const services = {
       title: "Rodent Control",
       description: "Strategic baiting and trapping for warehouses and offices.",
       highlights: ["Discreet Setup", "Monthly Audits", "FSSAI Compliant"],
-      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=400&h=300",
+      image: "/images/commercial_rodent.jpg",
     },
     {
       id: "com-2",
       title: "Mosquito Management",
       description: "Fogging and larvicidal treatments for large compounds.",
       highlights: ["Thermal Fogging", "Source Reduction", "Prevent Dengue/Malaria"],
-      image: "https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&q=80&w=400&h=300",
+      image: "/images/commercial_mosquito.jpg",
     },
     {
       id: "com-3",
       title: "Cockroach Gel Treatment",
       description: "Heavy-duty gel baiting for restaurant kitchens and food processing units.",
       highlights: ["HACCP Approved", "No Odor", "Night Service Available"],
-      image: "https://images.unsplash.com/photo-1616627547584-bf28cee262db?auto=format&fit=crop&q=80&w=400&h=300",
+      image: "/images/commercial_cockroach.jpg",
     },
   ]
 };
