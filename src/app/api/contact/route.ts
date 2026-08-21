@@ -80,19 +80,19 @@ export async function POST(req: Request) {
     const webhookUrl = process.env.DISCORD_WEBHOOK_URL || process.env.LEAD_WEBHOOK_URL;
     if (webhookUrl) {
       const embedFields = [
-        { name: "👤 Name", value: sanitizedData.full_name, inline: true },
-        { name: "📞 Phone", value: sanitizedData.phone, inline: true },
-        { name: "🛠️ Service", value: sanitizedData.service_type, inline: true },
-        { name: "📏 Property Size", value: sanitizedData.bhk_size, inline: true },
-        { name: "📍 Location", value: sanitizedData.location, inline: true },
-        { name: "🏠 Address", value: sanitizedData.address, inline: false }
+        { name: "Name", value: sanitizedData.full_name, inline: true },
+        { name: "Phone", value: sanitizedData.phone, inline: true },
+        { name: "Service", value: sanitizedData.service_type, inline: true },
+        { name: "Property Size", value: sanitizedData.bhk_size, inline: true },
+        { name: "Location", value: sanitizedData.location, inline: true },
+        { name: "Address", value: sanitizedData.address, inline: false }
       ];
 
       if (sanitizedData.email) {
-        embedFields.push({ name: "✉️ Email", value: sanitizedData.email, inline: true });
+        embedFields.push({ name: "Email", value: sanitizedData.email, inline: true });
       }
       if (sanitizedData.message) {
-        embedFields.push({ name: "📝 Additional Details", value: sanitizedData.message, inline: false });
+        embedFields.push({ name: "Additional Details", value: sanitizedData.message, inline: false });
       }
 
       fetch(webhookUrl, {
@@ -101,7 +101,7 @@ export async function POST(req: Request) {
         body: JSON.stringify({
           embeds: [
             {
-              title: "🚨 New Pest Control Lead Received!",
+              title: "New Pest Control Lead Received!",
               color: 15105570, // Alert Orange
               fields: embedFields,
               timestamp: new Date().toISOString()
